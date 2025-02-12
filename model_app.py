@@ -110,7 +110,7 @@ def main():
     st.title("🏘️ Daegu House Price Predictor")
     st.markdown("""
     ### Predict Apartment Prices in Daegu with Machine Learning
-    Use the sidebar to input apartment features and get an estimated price.
+    Use the **little arrow on the left** to input apartment features and get an estimated price.
     """)
     
     # Collect user input
@@ -131,7 +131,7 @@ def main():
         
         # Display input features
         with col1:
-            st.subheader("🔍 Apartment Features")
+            st.subheader("🔍 Inputted Apartment Features")
             features_display = df_customer.transpose()
             features_display.columns = ['Value']
             st.dataframe(features_display, use_container_width=True)
