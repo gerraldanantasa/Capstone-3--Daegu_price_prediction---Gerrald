@@ -3,6 +3,7 @@ import streamlit as st
 import pickle
 
 
+
 # Set page configuration
 st.set_page_config(
     page_title="Daegu House Price Predictor",
@@ -169,75 +170,7 @@ def main():
     except Exception as e:
         st.error(f"An error occurred: {e}")
 
-# Recommended Streamlit Deployment Diagnostic Script  
-import streamlit as st  
-import sys  
-import os  
-import traceback  
 
-def deployment_diagnostics():  
-    st.title("🚀 Deployment Diagnostics")  
-    
-    # Python and Environment Information  
-    st.header("System Information")  
-    st.write(f"**Python Version:** {sys.version}")  
-    st.write(f"**Current Working Directory:** {os.getcwd()}")  
-    
-    # Dependency Check  
-    st.header("Dependencies")  
-    required_packages = [  
-        'streamlit', 'pandas', 'numpy',   
-        'scikit-learn', 'pickle'  
-    ]  
-    
-    for package in required_packages:  
-        try:  
-            __import__(package)  
-            st.success(f"✅ {package} is installed")  
-        except ImportError:  
-            st.error(f"❌ {package} is NOT installed")  
-    
-    # Environment Variables  
-    st.header("Environment Variables")  
-    for key, value in os.environ.items():  
-        st.write(f"{key}: {value}")  
-
-# Deployment Best Practices Checklist  
-def deployment_best_practices():  
-    st.header("🛠 Deployment Best Practices")  
-    checklist = [  
-        "Ensure requirements.txt is in root directory",  
-        "Use exact package versions",  
-        "Avoid absolute file paths",  
-        "Handle file paths with os.path.join()",  
-        "Use relative paths for data files",  
-        "Check file permissions",  
-        "Verify data file locations"  
-    ]  
-    
-    for item in checklist:  
-        st.checkbox(item, value=False)  
-
-# Error Handling Template  
-def safe_app_runner():  
-    try:  
-        # Your main app logic here  
-        main()  
-    except Exception as e:  
-        st.error("Deployment Error Occurred")  
-        st.write("Detailed Error:")  
-        st.code(traceback.format_exc())  
-
-# Recommended requirements.txt template  
-def generate_requirements():  
-    st.header("📦 Recommended requirements.txt")  
-    requirements = """  
-    streamlit==1.29.0  
-    pandas==2.2.1  
-    numpy==1.26.4  
-    scikit-learn==1.4.1  
-    """  
-    st.code(requirements)
 
 # Run the app
 if __name__ == '__main__':
