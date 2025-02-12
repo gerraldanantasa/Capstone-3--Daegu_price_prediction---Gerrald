@@ -3,7 +3,6 @@ import streamlit as st
 import pickle
 
 
-
 # Set page configuration
 st.set_page_config(
     page_title="Daegu House Price Predictor",
